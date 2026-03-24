@@ -393,7 +393,6 @@ color:#cbd5f5;
 margin-bottom:25px;
 }
 
-
 /* BUTTONS */
 
 .cta-group{
@@ -479,64 +478,77 @@ margin-bottom:10px;
 color:#3b82f6;
 }
 
+.skill-card{
+display:flex;
+flex-direction:column;
+height:100%;
+}
+
 .skill-card h3{
-margin-bottom:15px;
+margin-bottom:16px;
 }
 
 .skill-list{
-display:flex;
-flex-direction:column;
-gap:14px;
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:10px;
 text-align:left;
 }
 
-.skill-item{
-display:flex;
-flex-direction:column;
-gap:7px;
-}
-
-.skill-meta{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:12px;
-}
-
 .skill-name{
-display:inline-flex;
+display:flex;
 align-items:center;
 gap:8px;
 font-size:14px;
 font-weight:500;
 color:#e2e8f0;
+padding:10px 12px;
+border-radius:10px;
+background:rgba(37,99,235,0.14);
+border:1px solid rgba(96,165,250,0.22);
+}
+
+.skill-list .skill-name:last-child:nth-child(odd){
+grid-column:1 / -1;
+justify-self:center;
+width:min(240px,100%);
+justify-content:center;
+text-align:center;
 }
 
 .skill-name i{
-width:16px;
+width:20px;
+font-size:18px;
 text-align:center;
-color:#60a5fa;
+color:inherit;
 }
 
-.skill-percent{
-font-size:13px;
-font-weight:600;
-color:#93c5fd;
+.skill-name .fa-c{color:#00599c;}
+.skill-name .fa-java{color:#f89820;}
+.skill-name .fa-python{color:#3776ab;}
+.skill-name .fa-html5{color:#e34f26;}
+.skill-name .fa-css3-alt{color:#1572b6;}
+.skill-name .fa-js{color:#f7df1e;}
+.skill-name .fa-node-js{color:#339933;}
+.skill-name .fa-php{color:#777bb4;}
+.skill-name .fa-react{color:#61dafb;}
+.skill-name .fa-server{color:#22d3ee;}
+.skill-name .fa-wind{color:#38bdf8;}
+.skill-name .fa-leaf{color:#47a248;}
+.skill-name .fa-database{color:#00758f;}
+.skill-name .fa-git-alt{color:#f05032;}
+.skill-name .fa-github{color:#f8fafc;}
+.skill-name .fa-cloud{color:#f8fafc;}
+
+@media (max-width: 768px){
+.skills-grid{
+grid-template-columns:1fr;
+gap:20px;
 }
 
-.skill-bar{
-height:8px;
-border-radius:999px;
-background:rgba(148,163,184,0.22);
-overflow:hidden;
+.skill-list{
+grid-template-columns:1fr;
 }
-
-.skill-bar span{
-display:block;
-height:100%;
-border-radius:999px;
-background:linear-gradient(90deg, #2563eb 0%, #38bdf8 100%);
-box-shadow:0 0 10px rgba(56,189,248,0.38);
 }
 
 .skill-tags{
