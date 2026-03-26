@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 const subtitle = document.getElementById('typing-text');
 const navbar = document.getElementById('navbar');
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
 
 const keepNavbarVisible = () => {
 if (!navbar) {
@@ -21,6 +23,47 @@ navbar.style.zIndex = '1000';
 keepNavbarVisible();
 window.addEventListener('scroll', keepNavbarVisible, { passive: true });
 window.addEventListener('resize', keepNavbarVisible);
+
+if (navToggle && navLinks) {
+const closeMenu = () => {
+navLinks.classList.remove('is-open');
+navToggle.setAttribute('aria-expanded', 'false');
+};
+
+const isMenuOpen = () => navLinks.classList.contains('is-open');
+
+navToggle.addEventListener('click', () => {
+const isOpen = navLinks.classList.toggle('is-open');
+navToggle.setAttribute('aria-expanded', String(isOpen));
+});
+
+navLinks.querySelectorAll('a').forEach((link) => {
+link.addEventListener('click', closeMenu);
+});
+
+window.addEventListener('resize', () => {
+if (window.innerWidth > 900) {
+closeMenu();
+}
+});
+
+document.addEventListener('click', (event) => {
+if (!isMenuOpen()) {
+return;
+}
+
+const target = event.target;
+if (target instanceof Node && !navLinks.contains(target) && !navToggle.contains(target)) {
+closeMenu();
+}
+});
+
+document.addEventListener('keydown', (event) => {
+if (event.key === 'Escape') {
+closeMenu();
+}
+});
+}
 
 if (!subtitle) {
 return;
