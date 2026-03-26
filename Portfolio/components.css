@@ -793,12 +793,14 @@ rgba(59,130,246,0) 100%
 }
 
 .education-card{
-padding:24px;
+padding:22px;
 width:calc(50% - 36px);
 display:flex;
 flex-direction:column;
 position:relative;
 z-index:1;
+min-height:220px;
+gap:12px;
 }
 
 .education-card:nth-child(odd){
@@ -850,16 +852,25 @@ right:-43px;
 
 .education-header{
 display:flex;
-flex-direction:column;
 align-items:flex-start;
-gap:12px;
-margin-bottom:10px;
+justify-content:space-between;
+gap:14px;
+margin-bottom:0;
 }
 
 .edu-left{
 display:flex;
 align-items:center;
 gap:16px;
+min-width:0;
+text-align:left;
+flex:1;
+padding-bottom:10px;
+border-bottom:1px solid rgba(148,163,184,0.2);
+}
+
+.edu-left > div{
+min-width:0;
 }
 
 .edu-logo{
@@ -877,6 +888,7 @@ font-size:1.1rem;
 font-weight:600;
 color:#e2e8f0;
 margin-bottom:2px;
+line-height:1.35;
 }
 
 .edu-location{
@@ -885,19 +897,29 @@ color:#94a3b8;
 }
 
 .edu-date{
-font-size:0.85rem;
-color:#3b82f6;
+font-size:0.78rem;
+color:#93c5fd;
 font-weight:500;
 white-space:nowrap;
-display:block;
-text-align:center;
-width:100%;
+display:inline-flex;
+align-self:flex-start;
+text-align:left;
+padding:4px 10px;
+border-radius:999px;
+border:1px solid rgba(96,165,250,0.4);
+background:rgba(59,130,246,0.14);
 }
 
 .edu-degree{
-color:#cbd5f5;
-margin-bottom:8px;
+color:#dbeafe;
+margin-bottom:0;
 font-size:0.95rem;
+line-height:1.55;
+text-align:left;
+padding:10px 12px;
+border-radius:10px;
+border:1px solid rgba(148,163,184,0.22);
+background:rgba(15,23,42,0.55);
 }
 
 .edu-score{
@@ -905,10 +927,12 @@ display:inline-block;
 background:rgba(59,130,246,0.15);
 color:#60a5fa;
 border:1px solid rgba(59,130,246,0.3);
-padding:3px 12px;
+padding:5px 12px;
 border-radius:20px;
 font-size:0.85rem;
 font-weight:500;
+margin-top:auto;
+align-self:flex-start;
 }
 
 @media (max-width: 900px){
@@ -924,6 +948,7 @@ transform:none;
 .education-card{
 width:100%;
 margin:0;
+min-height:0;
 }
 
 .education-card:nth-child(odd),
@@ -941,7 +966,18 @@ width:24px;
 left:-19px;
 right:auto;
 }
+
+.education-header{
+flex-direction:column;
+align-items:flex-start;
+gap:10px;
 }
+
+.edu-left{
+width:100%;
+}
+}
+
 
 
 /* CONTACT */
