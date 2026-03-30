@@ -572,6 +572,12 @@ gap:20px;
 
 .skill-list{
 grid-template-columns:1fr;
+text-align:center;
+}
+
+.skill-name{
+justify-content:center;
+text-align:center;
 }
 }
 
@@ -950,12 +956,11 @@ text-align:center;
 @media (max-width: 900px){
 .education-list{
 gap:14px;
-padding-left:22px;
+padding-left:0;
 }
 
 .education-list::before{
-left:14px;
-transform:none;
+display:none;
 }
 
 .education-card{
@@ -972,10 +977,7 @@ margin:0;
 }
 
 .education-card::before{
-left:-10px;
-right:auto;
-width:24px;
-height:2px;
+display:none;
 }
 
 .education-card::after{
