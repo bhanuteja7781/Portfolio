@@ -33,22 +33,6 @@ Option 2 (recommended):
 - Change skill labels and progress bars in the Skills section of `index.html`.
 - Replace profile and project images in `images/` and update paths in `index.html`.
 
-## Deployment (Netlify)
-### Method 1: GitHub + Netlify (Recommended)
-1. Push this folder to a GitHub repository.
-2. Go to https://app.netlify.com and sign in with GitHub.
-3. Click **Add new site** -> **Import an existing project**.
-4. Configuration for this static site:
-   - Branch to deploy: `main`
-   - Build Command: *(leave empty)*
-   - Publish Directory: `.`
-5. Click **Deploy**.
-
-### Method 2: Manual Drag-and-Drop
-1. Go to https://app.netlify.com/drop.
-2. Drag the full project folder into Netlify Drop.
-3. Netlify will generate a live URL instantly.
-
 ## Notes
 - Keep all file names and paths consistent with references in `index.html`.
 - If updates are not visible after deployment, clear browser cache or hard refresh.
