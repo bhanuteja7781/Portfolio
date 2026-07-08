@@ -69,7 +69,7 @@ if (!subtitle) {
 return;
 }
 
-const text = 'Full Stack Developer';
+const text = 'Full Stack Web Developer';
 let index = 0;
 let deleting = false;
 
