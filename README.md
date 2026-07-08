@@ -19,6 +19,7 @@ Personal portfolio website showcasing skills, projects, education, certification
 ## Run Locally
 This is a static website, so no build step is required.
 
+<<<<<<< HEAD
 **Option 1:** Open `index.html` directly in your browser.
 
 **Option 2 (recommended):** Use VS Code Live Server extension.
@@ -93,6 +94,25 @@ https://your-project.vercel.app
 - Keep all file names and paths consistent with references in `index.html`
 - If updates are not visible after deployment, clear browser cache (Ctrl+Shift+Delete)
 - Netlify is an alternative to Vercel for static site hosting
+=======
+Option 1:
+- Open `index.html` directly in your browser.
+
+Option 2 (recommended):
+- Use VS Code Live Server extension.
+- Right-click `index.html` -> Open with Live Server.
+
+## Customization Guide
+- Update personal details in `index.html`.
+- Edit colors/spacing/components in `components.css`.
+- Adjust background/theme effects in `components.css` (night-sky section).
+- Change skill labels and progress bars in the Skills section of `index.html`.
+- Replace profile and project images in `images/` and update paths in `index.html`.
+
+## Notes
+- Keep all file names and paths consistent with references in `index.html`.
+- If updates are not visible after deployment, clear browser cache or hard refresh.
+>>>>>>> 41ab47fb4c773ce98deef6f69d39e013567222cc
 
 ## License
 This project is for personal portfolio use.
